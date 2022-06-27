@@ -12,4 +12,15 @@
 ## Config file
 when a cluster is created, the file `config` is created inside `~/.kube/`. This file holds the context to connect with the cluster
 
-## Create a cluster
+## Cluster
+
+## command create cluster
+`kind create cluster`
+## command to set context
+`kubectl cluster-info --context kind-kind`
+## command to get nodes
+`kubectl get nodes`
+## command to get a cluster
+`kind get clusters`
+## command to delete a cluster
+`kind delete clusters cluster_name`
