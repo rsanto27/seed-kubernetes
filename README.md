@@ -32,10 +32,17 @@ when a cluster is created, the file `config` is created inside `~/.kube/`. This 
 ## command to get contexts
 `kubectl config get-clusters`
 ## command to switch contexts
-`kibectl config use-context foo`
+`kubectl config use-context foo`
 
 # Image with app to test kubernetes
 * Go app on `server.go`
 * Create Dockerfile for image
-* Build an image containing the app. `docker build -t yourApp .`
-* Run app. `docker run --rm -p 80:80 yourImage`
+* Build an image containing the app. `docker build -t name/my-app .`
+* Run app. `docker run --rm -p 80:80 name/myApp`
+* push your image to docker hub.
+
+# Pods
+* Create `pod.yaml` file.
+* Command to apply: `kubectl apply -f k8s/pod.yaml`.
+* Forward: `kubectl port-forward pod/goserver 8000:80`.
+* task `localhost:8000`.
