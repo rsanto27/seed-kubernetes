@@ -44,5 +44,14 @@ when a cluster is created, the file `config` is created inside `~/.kube/`. This 
 # Pods
 * Create `pod.yaml` file.
 * Command to apply: `kubectl apply -f k8s/pod.yaml`.
+* Command to get pods: `kubectl get pods`.
+* Command to delete pods: `kubectl delete pod name`.
 * Forward: `kubectl port-forward pod/goserver 8000:80`.
 * task `localhost:8000`.
+* Command do describe pod: `kubectl describe pod name`.
+
+# ReplicaSet
+* Create `replicasete.yaml` file.
+* Command to apply: `kubectl apply -f k8s/replicaset.yaml`.
+* Command to get replicasets: `kubectl get replicasets`.
+* Command to delete replicasets: `kubectl delete replicaset name`.
