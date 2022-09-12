@@ -27,7 +27,7 @@ when a cluster is created, the file `config` is created inside `~/.kube/`. This 
 `kind get clusters`
 ## Command to delete a cluster
 `kind delete clusters cluster_name`
-## Command to init clusters from .yml file
+## Command to init clusters from .yaml file
 `kind create cluster --config=k8s/config.yaml --name=knowledge`
 ## command to get contexts
 `kubectl config get-clusters`
