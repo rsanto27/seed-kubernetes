@@ -55,3 +55,11 @@ when a cluster is created, the file `config` is created inside `~/.kube/`. This 
 * Command to apply: `kubectl apply -f k8s/replicaset.yaml`.
 * Command to get replicasets: `kubectl get replicasets`.
 * Command to delete replicasets: `kubectl delete replicaset name`.
+* Forward `kubectl port-forward replicaset/goserver-6c8668f6d5 8000:80`.
+
+# Deployments
+* Create `deployment.yaml` file.
+* Command to apply: `kubectl apply -f k8s/deployment.yaml`.
+* Command to get deployments: `kubectl get deployments`.
+* Command to delete deployments: `kubectl delete deployment name`.
+* Forward `kubectl port-forward deployment/goserver 8000:80`.
