@@ -63,3 +63,8 @@ when a cluster is created, the file `config` is created inside `~/.kube/`. This 
 * Command to get deployments: `kubectl get deployments`.
 * Command to delete deployments: `kubectl delete deployment name`.
 * Forward `kubectl port-forward deployment/goserver 8000:80`.
+
+# Rolloout
+* Command to get history `kubectl rollout history deployment name`.
+* Command to undo `kubectl rollout undo deployment name`.
+* commant to undo with revision `kubectl rollout undo deployment name --to-revision=n`
