@@ -64,14 +64,31 @@ when a cluster is created, the file `config` is created inside `~/.kube/`. This 
 * Command to delete deployments: `kubectl delete deployment name`.
 * Forward `kubectl port-forward deployment/goserver 8000:80`.
 
-# Services
+# Variables
+* Create `configmap-env.yaml`.
+* Command to appy: `kubectl apply -f k8s/configmap-env.yaml`.
+
+# Services 
+## ClusterIp
 * Create `serrvice.yaml` file.
 * Command to apply `kubectl apply -f k8s/service.yaml`.
 * Forward `kubectl port-forward service/goserver-service 8000:80`.
-* Obs: `targetPort` redirect to container port, if your app/container has port 10 by example, then `targetPort` must be equals to 10. When you task `localhost:8000` the service will redirect to 80, that redirects to 10. 
+* Note: `targetPort` redirect to container port, if your app/container has port 10 by example, then `targetPort` must be equals to 10. When you task `localhost:8000` the service will redirect to 80, that redirects to 10. 
+
+## NodePort
+* When the type is `NodePort`, it's needed to establish a port or let randomly, this kind of port will make a connection with all pods
+
+## LoadBalance
+* Create `service-load-balancer.yaml`.
+* Note: This kind of service, will create an external ip.
+
 
 # Rolloout
 * Command to get history `kubectl rollout history deployment name`.
 * Command to undo `kubectl rollout undo deployment name`.
 * command to undo with revision `kubectl rollout undo deployment name --to-revision=n`
+
+# Proxy to kubernet apis
+* Commanto to establish the proxy `kubectl proxy --port=8080`.
+
 
